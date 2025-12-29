@@ -19,10 +19,9 @@ export default function Home() {
 
   //Redirect User Back to Login If not Authenticated.
   useEffect(() => {
-    if (!auth.isAuthenticated) {
-      navigate('/auth?next=/');
-    }
+    if (!auth.isAuthenticated) navigate('/auth?next=/');
   }, [auth.isAuthenticated])
+
   return (
     <main className="bg-[url('/images/bg-main.svg')] bg-cover">
       <Navbar />
